@@ -36,8 +36,8 @@ const Wrapper =  styled.div`
   display: flex;
   height: 100%;
   margin: auto;
-  transition: all 0.5s ease;
-  transform:translateX(${props=>props.slideIndex * -100}vw);
+  transition: all 1.5s ease;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -51,12 +51,15 @@ const Slide = styled.div`
   background-color: #${(props) => props.bg};
 `;
 const ImageContainer = styled.div` 
-height: 100%;
+  height: 100%;
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Image = styled.img `
-height: 80%;
+width: 100%;
 `;
 
 const InfoContainer = styled.div`
@@ -86,12 +89,12 @@ const Button = styled.button`
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
-    if(direction === 'left') {
-      setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
     } else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 2 : 0)
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
-  }
+  };
     return (
        <Container>
          <Arrows onClick={()=> handleClick ('left')} direction="left">

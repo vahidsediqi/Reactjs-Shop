@@ -24,14 +24,12 @@ const Info = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background-color: black;
-   opacity: 0.7;
+   background: rgba(0,0,0,0.5);
 `;
 
 const Title = styled.h1`
   color: white;
   margin-bottom: 20px;
-  z-index: 99;
 `;
 
 const Button = styled.button`
