@@ -38,6 +38,7 @@ const Wrapper =  styled.div`
   margin: auto;
   transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
+  
 `;
 
 const Slide = styled.div`
@@ -49,6 +50,9 @@ const Slide = styled.div`
   padding-right: 5%;
   padding-left: 5%;
   background-color: #${(props) => props.bg};
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const ImageContainer = styled.div` 
   height: 100%;

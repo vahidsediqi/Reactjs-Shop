@@ -40,7 +40,8 @@ const SearchContainer = styled.div`
 const Input = styled.input`
 border: none;
 &:input:focus {
-    border: none;
+    border: 0px;
+    outline: none;
     }
 `;
 
