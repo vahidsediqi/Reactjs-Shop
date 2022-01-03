@@ -12,7 +12,7 @@ import {
   
   const Container = styled.div`
     display: flex;
- 
+    flex-direction: wrap;
   `;
   
   const Left = styled.div`
@@ -87,7 +87,7 @@ import {
     return (
       <Container>
         <Left>
-          <Logo>LAMA.</Logo>
+          <Logo>VS Shop.</Logo>
           <Desc>
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
