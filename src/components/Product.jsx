@@ -64,7 +64,7 @@ const Circle = styled.div`
   border-radius: 50%;
 `;
 
-const Imgage = styled.img`
+const Image = styled.img`
 height: 75%;
 z-index: 2;
 `;
@@ -73,7 +73,7 @@ const Product = ({ item }) => {
     return (
         <Container>
             <Circle />
-            <Imgage src={item.img} />
+            <Image src={item.img} />
             <Info>
                 <Icon>
                    <ShoppingCartOutlined />

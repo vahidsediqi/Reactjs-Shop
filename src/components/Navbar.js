@@ -65,6 +65,10 @@ const MenuItem = styled.div`
  margin-left: 25px;
 `;
 
+const Image = styled.img`
+  width: 150px;
+`;
+
 const Navbar = () => {
     return (
         <Container>
@@ -77,7 +81,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo>VS Shop</Logo>
+                    <Image src="https://vahidsediqi.com/wp-content/uploads/2021/05/vahidlogo.png" />
                 </Center>
                 <Right>
                     <MenuItem>Register</MenuItem>
