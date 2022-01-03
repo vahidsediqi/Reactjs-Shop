@@ -68,7 +68,7 @@ export const sliderItems = [
     },
     {
       id:7,
-      img:"https://m.media-amazon.com/images/I/51rqWvoeptL._AC_SY445_.jpg",
+      img:"https://media3.dmax-shop.de//media/image/cd/5c/30/DMX15478-Brandit-m-65-Fieldjacket-Classic-3108-1-WR_600x600.png",
     },
     {
       id:8,
