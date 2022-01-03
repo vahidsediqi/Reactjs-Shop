@@ -5,17 +5,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div `
-height: 60px;
+height: 95px;
+padding-top: 15px;
 `;
 
 const Wrapper = styled.div`
- padding-top: 20px;
- padding-bottom: 20px;
  max-width: 90%;
  margin: auto;
  display: flex;
  align-items: center;
  justify-content: center;
+
 `;
 
 const Left = styled.div`
@@ -81,7 +81,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Image src="https://vahidsediqi.com/wp-content/uploads/2021/05/vahidlogo.png" />
+                    <Image src="https://vahidsediqi.com/wp-content/uploads/2021/05/black-logo.png" />
                 </Center>
                 <Right>
                     <MenuItem>Register</MenuItem>

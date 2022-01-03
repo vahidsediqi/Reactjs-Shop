@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const Container = styled.div`
- background-color: teal;
+ background-color: #43415B;
  color: white;
  height: 30px;
  display: flex;
