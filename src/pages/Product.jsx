@@ -6,6 +6,7 @@ import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
+import { useState } from "react";
 
 const Container = styled.div``;
 
@@ -109,7 +110,22 @@ const Button = styled.button`
   }
 `;
 
+const ForMouse = styled.div`
+    cursor: pointer;
+`
 export default function Product() {
+    const [prodcutCount, setProductCount ] = useState(1);
+    const handleAdProduct = () => {
+       setProductCount(prodcutCount + 1)
+    }
+
+    const handleRemoveProduct = () => {
+      if(prodcutCount > 1 ){
+          setProductCount(prodcutCount - 1)
+      } else (
+          setProductCount(prodcutCount)
+      )
+    }
     return (
         <Container>
             <Announcement />
@@ -145,9 +161,9 @@ export default function Product() {
                   </FilterContainer>
                   <AddContainer>
                     <AmountContainer>
-                    <Remove />
-                    <Amount>1</Amount>
-                    <Add />
+                  <ForMouse><Remove onClick={handleRemoveProduct}/></ForMouse>
+                    <Amount>{prodcutCount}</Amount>
+                    <ForMouse><Add onClick={handleAdProduct}/></ForMouse>
                     </AmountContainer>
                     <Button>ADD TO CART</Button>
                 </AddContainer>
