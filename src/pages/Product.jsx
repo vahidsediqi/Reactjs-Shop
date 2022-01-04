@@ -114,8 +114,9 @@ const ForMouse = styled.div`
     cursor: pointer;
 `
 export default function Product() {
-    const [prodcutCount, setProductCount ] = useState(1);
+    let [prodcutCount, setProductCount ] = useState(1);
     const handleAdProduct = () => {
+
        setProductCount(prodcutCount + 1)
     }
 
