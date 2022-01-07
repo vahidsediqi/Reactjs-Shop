@@ -113,7 +113,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <h1>VS</h1>
+                    <h1>V- Shop</h1>
                 </Center>
                 <Right>
                     <MenuItem>Register</MenuItem>
