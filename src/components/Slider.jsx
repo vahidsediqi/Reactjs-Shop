@@ -3,6 +3,8 @@ import { useState } from "react";
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import {sliderItems} from '../data.js'
+import { mobile } from '../responsive';
+
 
 
 const Container = styled.div`
@@ -11,6 +13,9 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 const Arrows = styled.div`
@@ -38,7 +43,9 @@ const Wrapper =  styled.div`
   margin: auto;
   transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
-  
+  @media (max-width: 768px) {
+    height: 'auto'
+  }
 `;
 
 const Slide = styled.div`
@@ -50,9 +57,12 @@ const Slide = styled.div`
   padding-right: 5%;
   padding-left: 5%;
   background-color: #${(props) => props.bg};
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  ${mobile({
+       flexDirection: 'column',
+       height: 'auto',
+       paddingTop: '50px',
+       paddingBottom: '50px'
+})}
 `;
 const ImageContainer = styled.div` 
   height: 100%;
@@ -60,19 +70,33 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${mobile({
+    height: '50px',
+    display: 'none'
+})}
 `;
 
 const Image = styled.img `
 width: 100%;
+${mobile({
+    width: '95%',
+    textAlign: 'center'
+})}
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
+  ${mobile({
+    padding: '0px'
+})}
 `;
 
 const Title = styled.h1`
   font-size: 70px;
+  ${mobile({
+    fontSize: '35px'
+})}
 `;
 
 const Desc = styled.p`

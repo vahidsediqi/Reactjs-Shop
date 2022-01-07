@@ -9,7 +9,7 @@ import ProductList from "./pages/ProductList";
 const App = () => {
   return ( 
     <div>
-      <Card />
+      <Home />
     </div>
   );
 };

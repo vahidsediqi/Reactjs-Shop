@@ -237,6 +237,7 @@ const Cart = () => {
                 <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>
             </Product>
+            {/* <Button>Update Card</Button> */}
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
