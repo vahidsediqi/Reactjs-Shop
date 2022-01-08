@@ -4,6 +4,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import {sliderItems} from '../data.js'
 import { mobile } from '../responsive';
+import { Routes, Route, Link } from "react-router-dom";
 
 
 
@@ -57,12 +58,13 @@ const Slide = styled.div`
   padding-right: 5%;
   padding-left: 5%;
   background-color: #${(props) => props.bg};
-  ${mobile({
-       flexDirection: 'column',
-       height: 'auto',
-       paddingTop: '50px',
-       paddingBottom: '50px'
-})}
+
+@media (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 `;
 const ImageContainer = styled.div` 
   height: 100%;
@@ -70,33 +72,36 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${mobile({
-    height: '50px',
-    display: 'none'
-})}
+
+@media (max-width: 768px) {
+ display: none;
+  }
+
 `;
 
 const Image = styled.img `
 width: 100%;
-${mobile({
-    width: '95%',
-    textAlign: 'center'
-})}
+
+@media (max-width: 768px) {
+    width: 95%;
+    text-align: center;
+  }
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
-  ${mobile({
-    padding: '0px'
-})}
+
+@media (max-width: 768px) {
+    padding: 0px 25
+  }
 `;
 
 const Title = styled.h1`
   font-size: 70px;
-  ${mobile({
-    fontSize: '35px'
-})}
+@media (max-width: 768px) {
+   font-size: 35px;
+  }
 `;
 
 const Desc = styled.p`
@@ -138,7 +143,9 @@ const Slider = () => {
                   <InfoContainer>
                   <Title>{item.title}</Title>
                   <Desc>{item.desc}</Desc>
-                  <Button>SHOW NOW</Button>
+                  <Link to ='/shop' >
+                     <Button>SHOW NOW</Button>
+                  </Link>
                 </InfoContainer>
               </Slide>
              ))

@@ -129,8 +129,6 @@ export default function Product() {
     }
     return (
         <Container>
-            <Announcement />
-            <Navbar/>
               <Wrapper>
                 <ImageContainer>
                     <Image src="https://i1.wp.com/camix.co.uk/wp-content/uploads/2021/01/canon-eos-r6-24-105-f4-l-is-usm-03.jpg?fit=1934%2C1316&ssl=1" alt="image"/>
@@ -171,7 +169,6 @@ export default function Product() {
                 </InfoContainer>
               </Wrapper>
             <Newsletter/>
-            <Footer/>
         </Container>
     )
 }

@@ -19,7 +19,10 @@ const Desc = styled.div`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
-
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 22px;
+  }
 `;
 
 const InputContainer = styled.div`
@@ -29,9 +32,9 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
-  ${mobile({
-       width: '95%'
-})}
+@media (max-width: 768px) {
+    width: 95%;
+  }
 `;
 
 const Input = styled.input`

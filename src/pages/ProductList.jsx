@@ -1,11 +1,9 @@
 import { Send } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
-import Announcement from '../components/Announcement';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import Products from '../components/Products';
+import { Routes, Route, Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -39,8 +37,6 @@ padding-top: 35px;
 export default function ProductList() {
     return (
         <Container>
-            <Announcement/>
-            <Navbar/>
             <Title>Dresses</Title>
             <FilterContainer>
                 <Filter>
@@ -78,9 +74,10 @@ export default function ProductList() {
                     </Select>
                 </Filter>
             </FilterContainer>
-            <Products/>
+            <Link to="/product">
+              <Products/>
+            </Link>
             <Newsletter/>
-            <Footer />
         </Container>
     )
 }

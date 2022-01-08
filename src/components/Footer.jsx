@@ -9,10 +9,13 @@ import {
   } from "@material-ui/icons";
   import styled from "styled-components";
 
-  
   const Container = styled.div`
     display: flex;
     flex-direction: wrap;
+    @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 25px
+  }
   `;
   
   const Left = styled.div`
