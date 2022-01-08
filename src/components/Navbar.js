@@ -94,11 +94,12 @@ const MenuItem = styled.div`
  font-size: 14px;
  cursor: pointer;
  margin-left: 25px;
+ color: black;
+ text-decoration: unset;
 @media screen and (max-width: 600px) {
  margin-left: auto;
  }
 `;
-
 
 const Navbar = () => {
     return (
@@ -112,19 +113,19 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                   <Link to="/"><h1>V- Shop</h1></Link>
+                   <Link style={{textDecoration:'none', color: 'black'}} to="/" ><h1>V- Shop</h1></Link>
                 </Center>
                 <Right>
-                <Link to="Register">
+                <Link style={{textDecoration:'none'}} to="Register">
                      <MenuItem>Register</MenuItem>
                 </Link>
-                <Link to="login">
+                <Link style={{textDecoration:'none'}} to="login">
                      <MenuItem>Login</MenuItem>
                 </Link>
                     <MenuItem>
                         <Badge badgeContent={4} color="primary">
-                            <Link to="card">
-                                <ShoppingCartOutlinedIcon />
+                            <Link style={{textDecoration:'none'}} to="card">
+                                <ShoppingCartOutlinedIcon style={{color:'black'}} />
                             </Link>
                         </Badge>
                     </MenuItem>
